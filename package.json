@@ -1,0 +1,25 @@
+{
+  "name": "pons",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "bun": ">=1.4.2"
+  },
+  "scripts": {
+    "start": "bun --env-file=.env src/pons.js",
+    "bridge": "bun --env-file=.env scripts/client.js",
+    "test": "bun --no-env-file test",
+    "check": "bun build src/pons.js src/bridge.js src/config.js scripts/client.js --target=bun --no-bundle --outdir=.check"
+  },
+  "dependencies": {
+    "discord.js": "14.27.0"
+  },
+  "packageManager": "bun@1.4.2",
+  "license": "MIT",
+  "description": "Local Discord bridge for Grok and other assistants",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/coral-way-capital/pons.git"
+  }
+}
